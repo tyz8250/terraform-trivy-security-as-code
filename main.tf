@@ -14,7 +14,7 @@ resource "aws_security_group_rule" "dangerous_ssh_ingress" {
   to_port           = 22
   protocol          = "tcp"
 
-  cidr_blocks       = ["0.0.0.0/0"]
+  cidr_blocks       = ["203.0.113.10/32"]
   description       = "Allow SSH from trusted IP only"
 
   security_group_id = aws_security_group.dangerous_ssh.id
